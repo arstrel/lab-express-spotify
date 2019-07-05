@@ -42,6 +42,8 @@ html, body {
   font-size: 1rem;
   display: inline-block;
   width: 45%;
+  max-width: 170px;
+  min-width: 150px;
   color: white;
   background-color: #ff6666;
   border: 2px solid #ff6666;
@@ -49,5 +51,82 @@ html, body {
 .home-button:hover {
   color: #ff6666;
   background-color: white;
+}
+.album-container {
+  background-color: #eee;
+} 
+.album-container > h1{
+  padding-left: 20px;
+} 
+.album-card {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 20px 20px;
+  padding: 5px;
+  align-items: center;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+.album-card p {
+  margin: 10px;
+  max-width: 220px;
+}
+.album-image {
+  height: 250px;
+  width: 250px;
+}
+.album-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  background-color: #F86967;
+  border-radius: 5px;
+  padding: 4px 10px;
+  border: 2px solid #ff6666;
   
+}
+.album-link:hover {
+  color: #ff6666;
+  background-color: white;
+}
+.album-info {
+  background-color: #4D4D4D;
+  padding-bottom: 20px;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 105px;
+  border-radius: 0 0 5px 5px;
+}
+.track-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.track-line audio {
+  height: 40px;
+}
+#track-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px 20px 40px;
+  color: #BBC1C3;
+  background-color: #4A4A4A;
+  font-size: 25px;
+  font-weight: bold;
+}
+#track-title h1{
+  margin: 0;
+}
+
+.track-container >div:nth-child(even) {
+  background-color: #ccc;
+}
+.track-container >div:nth-child(odd) {
+  background-color: #ddd;
 }

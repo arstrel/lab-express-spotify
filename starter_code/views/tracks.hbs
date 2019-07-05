@@ -1,11 +1,17 @@
-<h1>Tracks </h1>
 
-<div>
-    {{#each tracks}}
-          <h1>{{this.name}}  </h1>
-      {{#if this.preview_url}}
-          <audio src={{this.preview_url}} controls> </audio>
-      {{/if}}
+<div class="track-container">
+    <div id="track-title">
+        <h1>Title</h1>
+        <h1>Listen</h1>
+    </div>
+        {{#each tracks}}
+        <div class="track-line">
 
-  {{/each}}
+            <p>{{this.name}}  </p>
+            {{#if this.preview_url}}
+                <audio src={{this.preview_url}} controls> </audio>
+            {{/if}}
+
+        </div>
+        {{/each}}
 </div>

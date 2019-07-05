@@ -1,15 +1,20 @@
-<h1>Tracks </h1>
+<div class="album-container">
+  <div id="track-title">
 
-<div>
-    {{#each theAlbum}}
-  <h1>{{this.name}}  </h1>
-  {{#if this.images.[0].url}}
-  <img src="{{this.images.[0].url}}" alt="album">
-
-  {{else}}
-   <img src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" alt="album">
-
-  {{/if}}
-  <a href="/albums/tracks/{{this.id}}">Check out the tracks</a>
-  {{/each}}
+  <h1>Albums </h1>
+  </div>
+      {{#each theAlbum}}
+      <div class="album-card">
+        {{#if this.images.[0].url}}
+          <img src="{{this.images.[0].url}}"  alt="album" class="album-image">
+        {{else}}
+          <img src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" 
+          alt="album" class="album-image">
+        {{/if}}
+        <div class="album-info">
+          <p>{{this.name}}  </p>
+          <a href="/albums/tracks/{{this.id}}" class="album-link">Check out the tracks</a>
+        </div>
+      </div>
+    {{/each}}
 </div>
